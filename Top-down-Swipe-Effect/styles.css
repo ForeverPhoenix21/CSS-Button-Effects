@@ -6,6 +6,10 @@
 html {
   box-sizing: border-box;
 }
+body {
+  background-color: rgb(8, 8, 8);
+}
+
 /* Centers the button on the screen*/
 .body-wrapper {
   height: 100vh;
@@ -15,10 +19,44 @@ html {
 }
 
 .button {
-  height: 150px;
-  width: 450px;
-  font-size: 2rem;
-  padding: 5px;
-  border: 5px black solid;
-  background: white;
+  position: relative;
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: white;
+  padding: 60px 120px;
+  border: 5px white solid;
+  box-shadow: 5px 5px 5px #fbfafa91;
+  overflow: hidden;
+}
+
+.button:before {
+  content: "Enter";
+  background-color: rgb(105, 105, 50);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  /* z-index: -1; */
+  transform: translateY(-100%);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover:before {
+  transform: translateY(0);
+  transition: all 1s;
+  box-shadow: 5px 5px 5px #fbfafa91;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: 5px 5px 5px #fbfafa91;
+  transition: color 1s;
+}
+
+.button:active {
+  box-shadow: none;
 }
