@@ -15,10 +15,34 @@ html {
 }
 
 .button {
-  height: 150px;
-  width: 450px;
-  font-size: 2rem;
-  padding: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 3.5rem;
   border: 5px black solid;
-  background: white;
+  padding: 40px 80px;
+  box-shadow: 5px 5px 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #51ff0095;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: 1s;
+}
+
+.button:hover:before {
+  transform: rotate(0deg);
+}
+
+.button:active {
+  box-shadow: none;
 }
