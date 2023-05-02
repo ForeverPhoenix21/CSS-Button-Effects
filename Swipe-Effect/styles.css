@@ -3,9 +3,9 @@
 *::after {
   box-sizing: inherit;
 }
-body {
+/* body {
   background-color: rgba(111, 102, 102, 0.098);
-}
+} */
 html {
   box-sizing: border-box;
 }
