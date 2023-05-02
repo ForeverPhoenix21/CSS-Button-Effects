@@ -3,6 +3,9 @@
 *::after {
   box-sizing: inherit;
 }
+body {
+  background-color: rgba(111, 102, 102, 0.098);
+}
 html {
   box-sizing: border-box;
 }
@@ -15,10 +18,39 @@ html {
 }
 
 .button {
-  height: 150px;
-  width: 450px;
-  font-size: 2rem;
-  padding: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
   border: 5px black solid;
-  background: white;
+  padding: 60px 120px;
+  position: relative;
+  box-shadow: 5px 5px 5px;
+  overflow: hidden;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.button:hover::before {
+  transform: translateX(0%);
+}
+
+.button:hover {
+  color: rgba(252, 200, 208, 0.943);
+  box-shadow: 10px 10px 10px rgba(255, 108, 132, 0.84);
+  transition: all 1s;
+}
+
+.button:active {
+  box-shadow: none;
 }
