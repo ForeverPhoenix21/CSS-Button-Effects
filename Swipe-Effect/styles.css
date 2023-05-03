@@ -20,9 +20,9 @@ html {
 .button {
   text-decoration: none;
   color: black;
-  font-size: 3rem;
+  font-size: 3.5rem;
   border: 5px black solid;
-  padding: 60px 120px;
+  padding: 40px 80px;
   position: relative;
   box-shadow: 5px 5px 5px;
   overflow: hidden;

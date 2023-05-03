@@ -17,8 +17,8 @@ html {
 
 .button {
   border: 5px black solid;
-  padding: 60px 120px;
-  font-size: 3rem;
+  padding: 40px 80px;
+  font-size: 3.5rem;
   text-decoration: none;
   position: relative;
   /* overflow: hidden; */

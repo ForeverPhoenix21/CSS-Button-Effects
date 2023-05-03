@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.body-wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  position: relative;
+  border: 5px whitesmoke solid;
+  color: whitesmoke;
+  padding: 40px 80px;
+  font-size: 3.5rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px whitesmoke;
+}
+
+.button:hover {
+  background-color: rgb(255, 201, 201);
+  box-shadow: 5px 5px 10px rgb(255, 201, 201);
+  transition: all 0.3s;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+  /* z-index: -1; */
+}
+
+.button:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+.button:active {
+  box-shadow: none;
+}
