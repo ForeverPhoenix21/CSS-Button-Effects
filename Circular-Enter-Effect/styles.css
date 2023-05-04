@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.body-wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: 5px solid black;
+  padding: 20px 40px;
+  font-size: 3.5rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: orangered;
+  border-radius: 50% 50% 0% 0%;
+  height: 0;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.button:hover::before {
+  height: 190%;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: white;
+}

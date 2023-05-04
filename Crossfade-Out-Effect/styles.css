@@ -44,15 +44,19 @@ html {
 
 .button:after {
   /* top left brick */
-  content: " ";
+  content: "Hello";
   position: absolute;
   top: 0%;
   left: 0%;
   height: 100%;
   width: 100%;
   background-color: black;
-  z-index: -1;
+  /* z-index: -1; */
   transform: rotateY(90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   transition: all 1s;
 }
 
